@@ -277,6 +277,12 @@
 #endif
 
 #include "driver/gpio.h"
+
+// Dedicated GPIO / Fast GPIO
+#if SOC_DEDICATED_GPIO_SUPPORTED
+#include "driver/dedic_gpio.h"
+#endif
+
 #if ESP_IDF_VERSION_MAJOR > 4
 #include "driver/gptimer.h"
 #endif
